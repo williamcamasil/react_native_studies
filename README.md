@@ -14,11 +14,9 @@
   
   - npx react-native init MyApp
 
-- Create TS project
+- [Add TS project](https://reactnative.dev/docs/typescript)
   
-  - npx react-native init MyApp --template react-native-template-typescript
-    
-    - complemento para rodar além do comando: [Criando app com React Native e Typescript - YouTube](https://www.youtube.com/watch?v=tze6z7wAD-M)
+  - yarn add -D typescript @types/jest @types/react @types/react-native @types/react-test-renderer
 
 - Run project
   
@@ -37,6 +35,44 @@ Add these extentions
 - editor config
 
 - prettier
+
+
+
+##### tsconfig.json
+
+```json
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "jsx": "react-native",
+    "lib": ["es2017"],
+    "moduleResolution": "node",
+    "noEmit": true,
+    "strict": true,
+    "target": "esnext"
+  },
+  "exclude": [
+    "node_modules",
+    "babel.config.js",
+    "metro.config.js",
+    "jest.config.js"
+  ]
+}
+```
+
+##### jest.config.js
+
+```js
+module.exports = {
+  preset: 'react-native',
+  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node']
+};
+```
+
+ **OBS:** change App.js to App.tsx
 
 ##### .editorconfig
 
@@ -88,6 +124,40 @@ module.exports = {
   printWitdh: 80,
 };
 ```
+
+##### Sample App.tsx
+
+```tsx
+import React from 'react';
+import { Text, View, StyleSheet } from 'react-native';
+
+const App = () => {
+  return (
+    <View style={styles.container}>
+      <Text style={styles.greeting}>
+        Hello World!
+      </Text>
+    </View>
+  );
+};
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center'
+  },
+  greeting: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    margin: 16
+  }
+});
+
+export default App;
+```
+
+
 
 ### Debug
 
@@ -164,6 +234,23 @@ export const TaskList = ({tasks}: TaskListProps) => {
 };
 ```
 
+### Folders and files
+
+```
+android
+ios
+src
+    assets
+    components
+    pages
+tsconfig.json
+jest.config.js
+.eslintignore
+.eslintrc.js
+.prettierrc.js
+.editorconfig
+```
+
 ### Examples founded here
 
 Criar sub branchs com cada estudo, lincado a esses itens
@@ -195,3 +282,9 @@ Criar sub branchs com cada estudo, lincado a esses itens
 - Using Images and Icons
 
 - Tests
+
+
+
+### Links
+
+* [Criando app com React Native e Typescript - YouTube](https://www.youtube.com/watch?v=tze6z7wAD-M)
