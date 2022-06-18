@@ -36,8 +36,6 @@ Add these extentions
 
 - prettier
 
-
-
 ##### tsconfig.json
 
 ```json
@@ -157,8 +155,6 @@ const styles = StyleSheet.create({
 export default App;
 ```
 
-
-
 ### Debug
 
 Na tela executada apartir do comando npm start / yarn start (bundle) é aberto no terminal a possibilidade de "r" - reload ou "d" developer menu, ao teclar "d" será aberto no simulador DevMenu, onde é possível acompanhar a tela de debug do app (clicando em Debug) obs: igual do web. A qual é possivel inserir breakpoints, para isso selecione no devtools: Source e busque pela página a ser debugada.
@@ -242,32 +238,41 @@ ios
 src
     assets
     components
-    pages
-tsconfig.json
-jest.config.js
+    screens
+        Home
+            index.tsx
+            styles...
+    services
+    utils
+.editorconfig
 .eslintignore
 .eslintrc.js
 .prettierrc.js
-.editorconfig
+jest.config.js
+tsconfig.json
 ```
 
 ### Examples founded here
 
 Criar sub branchs com cada estudo, lincado a esses itens
 
-- Navigation
-
-- Styled Components
-
-- Context Api
-
-- List
+- Props
 
 - TS types
 
-- Props
-
 - Components
+  
+  - List
+
+- Styled Components
+
+- Using Images, fonts and Icons
+
+- Utils
+
+- Navigation
+
+- Context Api
 
 - UseEffect / UseState
 
@@ -279,11 +284,7 @@ Criar sub branchs com cada estudo, lincado a esses itens
 
 - Diferent styles Android / IOS
 
-- Using Images and Icons
-
 - Tests
-
-
 
 ### Links
 
