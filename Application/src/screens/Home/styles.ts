@@ -6,9 +6,4 @@ export default StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  greeting: {
-    fontSize: 20,
-    fontWeight: 'bold',
-    margin: 16,
-  },
 });
