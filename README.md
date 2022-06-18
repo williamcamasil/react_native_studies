@@ -241,7 +241,7 @@ src
     screens
         Home
             index.tsx
-            styles...
+            styles.ts
     services
     utils
 .editorconfig
@@ -256,13 +256,11 @@ tsconfig.json
 
 Criar sub branchs com cada estudo, lincado a esses itens
 
-- Props
+- Props / Components
 
 - TS types
 
-- Components
-  
-  - List
+- List
 
 - Styled Components
 

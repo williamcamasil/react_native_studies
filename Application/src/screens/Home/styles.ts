@@ -11,4 +11,8 @@ export default StyleSheet.create({
     fontWeight: 'bold',
     margin: 16,
   },
+  hr: {
+    height: 100,
+    backgroundColor: 'black',
+  },
 });
