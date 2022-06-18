@@ -197,9 +197,7 @@ Criar sub branchs com cada estudo, lincado a esses itens
 
 - [Props / Components](https://github.com/williamcamasil/react_native_studies/tree/feature/Props)
 
-- TS types
-
-- List
+- [TS types and List](https://github.com/williamcamasil/react_native_studies/tree/feature/TsTypes)
 
 - Styled Components
 
