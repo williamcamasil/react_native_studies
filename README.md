@@ -256,7 +256,7 @@ tsconfig.json
 
 Criar sub branchs com cada estudo, lincado a esses itens
 
-- Props / Components
+- [Props / Components]([GitHub - williamcamasil/react_native_studies at feature/Props](https://github.com/williamcamasil/react_native_studies/tree/feature/Props))
 
 - TS types
 
