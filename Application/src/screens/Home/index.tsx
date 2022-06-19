@@ -1,13 +1,12 @@
 import React from 'react';
-import {View, Text} from 'react-native';
 
-import styles from './styles';
+import {Container, Title} from './styles';
 
 const Home = () => {
   return (
-    <View style={styles.container}>
-      <Text style={styles.greeting}>Hello World!</Text>
-    </View>
+    <Container>
+      <Title>Hello World!</Title>
+    </Container>
   );
 };
 
