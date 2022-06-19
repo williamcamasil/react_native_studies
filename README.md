@@ -8,6 +8,14 @@
 
 3. [Debug](#debug)
 
+4. [Stylization (Android / IOS)](#Stylization (Android / IOS))
+
+5. [Folders and files](#Folders and files)
+
+6. [Examples founded here](#Examples founded here)
+
+7. [Links](#Links)
+
 ### Intro commands
 
 - Create JS project
@@ -175,6 +183,8 @@ ios
 src
     assets
     components
+    global
+        styles
     screens
         Home
             index.tsx
@@ -199,7 +209,7 @@ Criar sub branchs com cada estudo, lincado a esses itens
 
 - [TS types and List](https://github.com/williamcamasil/react_native_studies/tree/feature/TsTypes)
 
-- Styled Components
+- [Styled Components](https://github.com/williamcamasil/react_native_studies/tree/feature/StyledComponents)
 
 - Using Images, fonts and Icons
 
