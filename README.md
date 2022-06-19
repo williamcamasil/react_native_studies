@@ -213,13 +213,11 @@ Criar sub branchs com cada estudo, lincado a esses itens
 
 - Using Images, fonts and Icons
 
-- Utils
+- UseEffect / UseState / Utils
 
 - Navigation
 
 - Context Api
-
-- UseEffect / UseState
 
 - Use libs
 
