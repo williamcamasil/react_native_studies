@@ -1,0 +1,24 @@
+[
+  {
+    "id": 1,
+    "name": "William Camasil",
+    "age": 27,
+    "job": "Developer",
+    "married": false
+  },
+  {
+    "id": 2,
+    "name": "Francilene Sousa",
+    "age": 35,
+    "job": "Complience",
+    "married": false
+  },
+  {
+    "id": 3,
+    "name": "John Moura",
+    "age": 21,
+    "job": "Seler",
+    "married": true
+  }
+]
+
