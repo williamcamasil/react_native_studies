@@ -24,7 +24,7 @@
 
 ###### 
 
-###### Simples exemplo de declaração [Utils/Helper]([reactjs - How to create helper file full of functions in react native? - Stack Overflow](https://stackoverflow.com/questions/38402025/how-to-create-helper-file-full-of-functions-in-react-native))
+###### Simples exemplo de declaração [Utils/Helper](https://stackoverflow.com/questions/38402025/how-to-create-helper-file-full-of-functions-in-react-native)
 
 src/utils/UtilMath.ts
 
