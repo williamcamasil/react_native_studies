@@ -12,9 +12,13 @@
 
 5. [Folders and files](#Folders and files)
 
-6. [Examples founded here](#Examples founded here)
+6. [IOS Anotations](#IOS Anotations)
 
-7. [Links](#Links)
+7. [Android Anotations](#Android Anotations)
+
+8. [Examples founded here](#Examples founded here)
+
+9. [Links](#Links)
 
 ### Intro commands
 
@@ -199,6 +203,29 @@ jest.config.js
 tsconfig.json
 ```
 
+
+
+### IOS Anotations
+
+##### How to run ios project in Xcode
+
+```
+- Ao criar o projeto, acesse a pasta IOS e execute o comando “pod Install” ele irá add as dependências do projeto para permitir funcionar o projeto;
+- Abra o Xcode e ao buscar o projeto, procure dentro da pasta IOS do projeto por um arquivo com extensão .xcworkspace e selecione o para abrir
+- No Xcode clique no play para iniciar o projeto;
+- OBS: também é possível executar o projeto a partir do comando yarn rua ios do terminal do VSCode;
+
+
+```
+
+
+
+### Android Anotations
+
+....
+
+
+
 ### Examples founded here
 
 Criar sub branchs com cada estudo, lincado a esses itens
@@ -219,6 +246,8 @@ Criar sub branchs com cada estudo, lincado a esses itens
 
 - Context Api
 
+- Redux
+
 - Use libs
 
 - Natives resources (Camera / sound / bluetooth, geolocation / ...)
@@ -228,6 +257,10 @@ Criar sub branchs com cada estudo, lincado a esses itens
 - Diferent styles Android / IOS
 
 - Tests
+
+- Partners
+  
+  - composition root
 
 ### Links
 
