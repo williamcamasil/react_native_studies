@@ -1,15 +1,9 @@
 import {StyleSheet} from 'react-native';
 
 export default StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  greeting: {
+  title: {
     fontSize: 20,
     fontWeight: 'bold',
-    margin: 16,
   },
   button: {
     backgroundColor: '#F44',
@@ -20,5 +14,10 @@ export default StyleSheet.create({
   },
   buttonText: {
     color: '#FFF',
+  },
+  result: {
+    backgroundColor: '#CCC',
+    padding: 20,
+    marginTop: 30,
   },
 });
