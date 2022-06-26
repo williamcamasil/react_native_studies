@@ -45,4 +45,16 @@ src/screens/Home/index.tsx
     console.log(sum(4, 5));
     console.log(subtract(4, 5));
 
-##### 
+##### useEffect
+
+```tsx
+useEffect(() => {
+ //Executa código
+}, [listName])
+```
+
+**Anotações sobre useEffect:**
+
+- Sempre que houver uma alteração em listName, será executado o useEffect;
+- Entre [] com o listName, pode conter mais variáveis ex.: [listName, listAge, etc] a qual terá a mesma ação de executar o useEffect quando uma das variáveis for alterada;
+- O [] sem variável será executado somente uma vez;  
