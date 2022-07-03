@@ -1,55 +1,99 @@
-criei uma pasta backend > dentro da pasta instalei json server pelo terminal com o comando:
+# Rest API Json Service
 
-npm install -g json-server
+### Json Service (CRUD)
 
-crie um arquivo db.json
+How to create json service API (Steps):
 
-populamos o arquivo .json
+* create folder ('backend')
 
-execute o comando:
+* in terminal inside this new folder, install json server with command:
+  
+  * ```
+    npm install -g json-server
+    ```
 
-json-server --watch db.json
+* inside backend folder create db.json file
 
-GET
+* insert json information like this example and save:
+  
+  * ```json
+    {
+      "alunos": [
+        {
+          "id": 1,
+          "nome": "William",
+          "nota": "10"
+        }
+      ]
+    }
+    ```
 
-http://localhost:3000/alunos
+*  in terminal execute this command:
+  
+  * ```
+    json-server --watch db.json
+    ```
 
-POST
+* if you want to create some tests, open postman and try these:
+  
+  * GET > http://localhost:3000/alunos
+  
+  * POST > http://localhost:3000/alunos (insert json body)
+    
+    * ```json
+      {
+          "nome": "Joaquim",
+          "nota": 8
+      }
+      ```
+  
+  * PUT > http://localhost:3000/alunos/2 (insert json body)
+    
+    * ```json
+      {
+          "nome": "Joaquim Alfonso",
+          "nota": 4
+      }
+      ```
+  
+  * DELETE > http://localhost:3000/alunos/3
 
-http://localhost:3000/alunos
 
-```json
-{
-    "nome": "Joaquim",
-    "nota": 8
-}
+
+**Important:** When execute project run backend command: **json-server --watch db.json**
+
+
+
+### Folders
+
+```
+src
+	components
+	Interfaces
+	routes
+	screens
+	services
+	Utils
 ```
 
-PUT
-
-http://localhost:3000/alunos/3
-
-```json
-{
-    "nome": "Joaquim",
-    "nota": 4
-}
-```
-
-DELETE
-
-http://localhost:3000/alunos/3
-
-link
-
-[React Native: REST APIs com JSON server | Alura](https://www.alura.com.br/artigos/react-native-rest-apis-json-server)
-
-[Network error with axios and react native - Stack Overflow](https://stackoverflow.com/questions/49370747/network-error-with-axios-and-react-native)
-
-[📱🤘🏾Calling API Data with TypeScript and React Native - YouTube](https://www.youtube.com/watch?v=JUiacuYwEvc)
 
 
 
-Projeto
 
-yarn add axios
+### Libs in project
+
+* axios > yarn add axios
+
+
+
+### Links
+
+* [React Native: REST APIs com JSON server | Alura](https://www.alura.com.br/artigos/react-native-rest-apis-json-server)
+
+* [Network error with axios and react native - Stack Overflow](https://stackoverflow.com/questions/49370747/network-error-with-axios-and-react-native)
+
+* [📱🤘🏾Calling API Data with TypeScript and React Native - YouTube](https://www.youtube.com/watch?v=JUiacuYwEvc)
+
+* [react-native-toast-message/quick-start.md at main · calintamas/react-native-toast-message · GitHub](https://github.com/calintamas/react-native-toast-message/blob/main/docs/quick-start.md)
+
+* [javascript - How to re-render component on going back using back button in react native? - Stack Overflow](https://stackoverflow.com/questions/60362589/how-to-re-render-component-on-going-back-using-back-button-in-react-native)
