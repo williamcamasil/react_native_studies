@@ -44,12 +44,8 @@ npx react-native link @react-native-async-storage/async-storage
 
 
 
-
-
 ### Link
 
 * https://reactjs.org/docs/context.html
-
-* https://react-native-async-storage.github.io/async-storage/docs/install/
 
 * https://react-native-async-storage.github.io/async-storage/docs/install/
