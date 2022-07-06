@@ -30,8 +30,8 @@ src/routes/
 Stack
     Models
         index.ts //tipagem das páginas com passagem de parametro em Profile
-    index.ts //declaração das páginas utilizadas em Stack
-index.ts //container contendo tudo em Stack
+    index.tsx //declaração das páginas utilizadas em Stack
+index.tsx //container contendo tudo em Stack
 ```
 
 ##### Recebendo route file
