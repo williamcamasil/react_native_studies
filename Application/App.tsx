@@ -1,13 +1,14 @@
 import React from 'react';
-import {TasksProvider} from './src/context/TasksContext';
-import {Home} from './src/screens/Home';
+import {PersonProvider} from './src/context/PersonContext';
+// import {Home} from './src/screens/Home';
+import Route from './src/routes';
 
 const App = () => {
   return (
     //Disponibilização do context nas telas dentro do provider
-    <TasksProvider>
-      <Home />
-    </TasksProvider>
+    <PersonProvider>
+      <Route />
+    </PersonProvider>
   );
 };
 

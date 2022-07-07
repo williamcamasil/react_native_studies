@@ -16,6 +16,12 @@ export default StyleSheet.create({
     fontSize: 24,
     fontWeight: 'bold',
   },
+  titleTasks: {
+    color: '#f1f1f1',
+    fontSize: 24,
+    fontWeight: 'bold',
+    marginVertical: 50,
+  },
   input: {
     backgroundColor: '#29292e',
     color: '#f1f1f1',
