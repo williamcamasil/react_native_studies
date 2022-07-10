@@ -114,11 +114,35 @@ Para utilizar AS é necessário criar um mock, pois não tem dispositivo para ac
 
 * [Async Storage com testes](https://react-native-async-storage.github.io/async-storage/docs/advanced/jest)
 
-### 
+* [GitHub - testing-library/react-hooks-testing-library: 🐏 Simple and complete React hooks testing utilities that encourage good testing practices.](https://github.com/testing-library/react-hooks-testing-library)
+
+ 
 
 ### Próximos passos
 
 ### 
+
+### Exemplos
+
+* [Validando input](https://github.com/aluiziodeveloper/rn-app-mytasks/commit/91dc00912b759ed848e2f0d75db823467b276a60)
+  
+  * Através do render da página, é possível pegar várias ações da página ou componente;
+
+* [React Hooks](https://github.com/aluiziodeveloper/rn-app-mytasks/commit/e90b7283e75f2dbc29d64bacd9a49c5f94309928)
+  
+  * Teste do hook personalizado do context api, além de teste dos hooks padrão;
+
+* [Testando pressionar do botão](https://github.com/aluiziodeveloper/rn-app-mytasks/commit/3acd5399a27d30b5b8ea559f3e89c275a82cfbfe)
+  
+  * Teste de alteração de texto no input;
+  
+  * Teste de clique do botão para add item na lista;
+  
+  * Inserção de item na lista do context api;
+
+* [Testando componente](https://github.com/aluiziodeveloper/rn-app-mytasks/commit/5c1140476f21317d7af2a6e57d0b12122493c1cb)
+  
+  * Teste para remover item da lista; 
 
 ### Links
 
