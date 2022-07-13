@@ -1,8 +1,11 @@
 import React from 'react';
-import { KeyboardAvoidingView, Platform, ScrollView } from 'react-native';
-import { useNavigation } from '@react-navigation/native';
-import { Button } from '../../components/Form/Button';
-import { Input } from '../../components/Form/Input';
+import {KeyboardAvoidingView, Platform, ScrollView} from 'react-native';
+import {useForm, FieldValues} from 'react-hook-form';
+import {useNavigation} from '@react-navigation/native';
+import {yupResolver} from '@hookform/resolvers/yup';
+import * as yup from 'yup';
+import {Button} from '../../components/Form/Button';
+import {InputControl} from '../../components/Form/InputControl';
 import {
   BackToSignIn,
   BackToSignInTitle,
@@ -19,29 +22,76 @@ interface ScreenNavigationProp {
   goBack: () => void;
 }
 
+interface IFormInputs {
+  [name: string]: any;
+}
+
+const formSchema = yup.object({
+  name: yup.string().required('Informe o nome completo.'),
+  email: yup.string().email('Email inválido.').required('Informe o email.'),
+  password: yup.string().required('Informe a senha.'),
+});
+
 // const SignUp: React.FunctionComponent = () => {
 const SignUp = () => {
-  const { goBack } = useNavigation<ScreenNavigationProp>();
+  const {
+    handleSubmit,
+    control,
+    formState: {errors},
+  } = useForm<FieldValues>({
+    resolver: yupResolver(formSchema),
+  });
+  const {goBack} = useNavigation<ScreenNavigationProp>();
+
+  const handleSignUp = (form: IFormInputs) => {
+    const data = {
+      name: form.name,
+      email: form.email,
+      password: form.password,
+    };
+
+    console.log(data);
+  };
 
   return (
     <KeyboardAvoidingView
       enabled
-      style={{ flex: 1 }}
-      behavior={Platform.OS === 'ios' ? 'padding' : undefined}
-    >
+      style={{flex: 1}}
+      behavior={Platform.OS === 'ios' ? 'padding' : undefined}>
       <ScrollView
         keyboardShouldPersistTaps="handled"
-        contentContainerStyle={{ flex: 1 }}
-      >
+        contentContainerStyle={{flex: 1}}>
         <Container>
           <Content>
             <Logo source={logo} />
             <Title>Crie sua conta</Title>
-            <Input placeholder="Nome completo" />
-            <Input placeholder="Email" />
-            <Input placeholder="Senha" />
+            <InputControl
+              autoCapitalize="none"
+              autoCorrect={false}
+              control={control}
+              name="name"
+              placeholder="Nome completo"
+              error={errors.name && errors.name.message}
+            />
+            <InputControl
+              autoCapitalize="none"
+              autoCorrect={false}
+              control={control}
+              name="email"
+              placeholder="Email"
+              keyboardType="email-address"
+              error={errors.email && errors.email.message}
+            />
+            <InputControl
+              control={control}
+              name="password"
+              placeholder="Senha"
+              autoCorrect={false}
+              secureTextEntry
+              error={errors.password && errors.password.message}
+            />
 
-            <Button title="Criar conta" />
+            <Button title="Entrar" onPress={handleSubmit(handleSignUp)} />
           </Content>
         </Container>
       </ScrollView>

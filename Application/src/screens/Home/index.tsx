@@ -9,7 +9,7 @@ import {
   UserInfoDetail,
   UserName,
   UserWrapper,
-  Icon
+  Icon,
 } from './styles';
 import avatarDefault from '../../assets/avatar02.png';
 import logout from '../../assets/logout.png';

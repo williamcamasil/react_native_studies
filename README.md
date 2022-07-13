@@ -10,6 +10,9 @@
 * [React Navigation](https://reactnavigation.org/)
     * [Stack](https://reactnavigation.org/docs/hello-react-navigation)
     * [Hook useNavigation](https://reactnavigation.org/docs/use-navigation/) usado para navegação de páginas
+* [React Hook Form](https://react-hook-form.com/)
+    * [React Native example](https://react-hook-form.com/get-started#ReactNative)
+    * [Yup github](https://github.com/jquense/yup)
 
 
 ### Como usar o RN responsive fontsize
@@ -48,4 +51,15 @@ npx pod-install ios
 Em caso de utilizar Stack
 ```
 yarn add @react-navigation/native-stack
+```
+
+### Como usar o React Hook Form
+
+Biblioteca para criação de formulários
+
+##### Instalar
+```
+yarn add react-hook-form
+
+yarn add @hookform/resolvers yup
 ```
