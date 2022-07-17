@@ -13,7 +13,9 @@
 * [React Hook Form](https://react-hook-form.com/)
     * [React Native example](https://react-hook-form.com/get-started#ReactNative)
     * [Yup github](https://github.com/jquense/yup)
-
+* [Backend utilizado](https://github.com/aluiziodeveloper/api-node-devprofile)
+* [Axios para consumo de apis](https://axios-http.com/docs/intro)
+* [https://react-native-async-storage.github.io/async-storage/docs/install/](Async Storage)
 
 ### Como usar o RN responsive fontsize
 
@@ -63,3 +65,46 @@ yarn add react-hook-form
 
 yarn add @hookform/resolvers yup
 ```
+
+### Backend utilizado
+
+Usaremos um backend contruindo em node js a qual conterá as APIs que utilizaremos na autenticação, criação de conta, páginas privadas e publicas, etc.
+
+[Repositório + Documentação](https://github.com/aluiziodeveloper/api-node-devprofile)
+
+Para executar o projeto após configuração concluída, execute o comando
+```
+yarn dev
+```
+
+### Como usar o Axios
+
+Biblioteca para consumo de rest apis.
+
+##### Instalar
+```
+yarn add axios
+```
+
+### Como usar o Async Storage
+
+Biblioteca para armazenamento local de informações.
+
+##### Instalar
+```
+yarn add @react-native-async-storage/async-storage
+
+//IOS
+npx pod-install
+ou 
+acesse a pasta ios e execute:
+pod install
+
+//Em seguida
+npx react-native link @react-native-async-storage/async-storage
+```
+
+### Desafios
+
+* Inserir spinning de loading nas chamadas e bloquear os botões durante o carregamento;
+

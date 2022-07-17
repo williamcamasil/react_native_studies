@@ -1,5 +1,10 @@
 import React from 'react';
-import {KeyboardAvoidingView, Platform, ScrollView} from 'react-native';
+import {
+  Alert,
+  KeyboardAvoidingView,
+  Platform,
+  ScrollView,
+} from 'react-native';
 import {useForm, FieldValues} from 'react-hook-form';
 import {useNavigation} from '@react-navigation/native';
 import {yupResolver} from '@hookform/resolvers/yup';
@@ -16,7 +21,8 @@ import {
   Title,
 } from './styles';
 import logo from '../../assets/logo.png';
-import enter from '../../assets/back.png';
+import back from '../../assets/back.png';
+import { api } from '../../services/api';
 
 interface ScreenNavigationProp {
   goBack: () => void;
@@ -43,14 +49,25 @@ const SignUp = () => {
   });
   const {goBack} = useNavigation<ScreenNavigationProp>();
 
-  const handleSignUp = (form: IFormInputs) => {
+  const handleSignUp = async (form: IFormInputs) => {
     const data = {
       name: form.name,
       email: form.email,
       password: form.password,
     };
 
-    console.log(data);
+    try {
+      await api.post('users', data);
+      Alert.alert(
+        'Cadastro realizado',
+        'Você já pode fazer login na aplicação.',
+      );
+    } catch (error) {
+      Alert.alert(
+        'Erro no cadastro',
+        'Ocorreu um erro ao fazer o cadastro. Tente novamente. ERRO: ' + error,
+      );
+    }
   };
 
   return (
@@ -96,7 +113,7 @@ const SignUp = () => {
         </Container>
       </ScrollView>
       <BackToSignIn onPress={() => goBack()}>
-        <Icon source={enter} />
+        <Icon source={back} />
         <BackToSignInTitle>Voltar para logon</BackToSignInTitle>
       </BackToSignIn>
     </KeyboardAvoidingView>

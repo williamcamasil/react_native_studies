@@ -1,11 +1,18 @@
 import React from 'react';
-import {ScrollView, KeyboardAvoidingView, Platform, View} from 'react-native';
+import {
+  ScrollView,
+  KeyboardAvoidingView,
+  Platform,
+  View,
+  Alert,
+} from 'react-native';
 import {useForm, FieldValues} from 'react-hook-form';
 import {yupResolver} from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 import {useNavigation} from '@react-navigation/native';
 import {Button} from '../../components/Form/Button';
 import {InputControl} from '../../components/Form/InputControl';
+import { useAuth } from '../../context/AuthContext';
 import {
   Container,
   Content,
@@ -37,6 +44,9 @@ const formSchema = yup.object({
 
 // const SignIn: React.FunctionComponent = () => {
 const SignIn = () => {
+  const { signIn } = useAuth();
+  const [loading, setLoading] = React.useState(false);
+
   const {
     handleSubmit,
     control,
@@ -53,7 +63,15 @@ const SignIn = () => {
       password: form.password,
     };
 
-    console.log(data);
+    try {
+      setLoading(true);
+      signIn(data);
+    } catch (error) {
+      Alert.alert(
+        'Erro na autenticação',
+        'Ocorreu um erro ao fazer login, verifique as credenciais.',
+      );
+    }
   };
 
   return (
@@ -91,9 +109,14 @@ const SignIn = () => {
               error={errors.password && errors.password.message}
             />
 
-            <Button title="Entrar" onPress={handleSubmit(handleSignIn)} />
+            <Button
+              title="Entrar"
+              //desabilita o botao quando estiver carregando ou com erro para evitar ficar clicando e fazer requisicao desnecessaria
+              disabled={loading || errors.email || errors.password}
+              onPress={handleSubmit(handleSignIn)}
+            />
 
-            <ForgotPasswordButton>
+            <ForgotPasswordButton onPress={() => navigate('ForgotPassword')}>
               <ForgotPasswordTitle>Esqueci minha senha</ForgotPasswordTitle>
             </ForgotPasswordButton>
           </Content>

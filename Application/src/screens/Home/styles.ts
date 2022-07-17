@@ -60,3 +60,5 @@ export const Icon = styled.Image`
   width: ${RFValue(32)}px;
   height: ${RFValue(32)}px;
 `;
+
+export const LogoutButton = styled.TouchableOpacity``;
